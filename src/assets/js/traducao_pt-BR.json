@@ -1,0 +1,32 @@
+{
+    "translation": {
+        "normal": "Normal",
+        "fighting": "Lutador",
+        "flying": "Voador",
+        "poison": "Venenoso",
+        "ground": "Terrestre",
+        "rock": "Rocha",
+        "bug": "Inseto",
+        "ghost": "Fantasma",
+        "steel": "Aço",
+        "fire": "Fogo",
+        "water": "Água",
+        "grass": "Grama",
+        "electric": "Elétrico",
+        "psychic": "Psíquico",
+        "ice": "Gelo",
+        "dragon": "Dragão",
+        "dark": "Noturno",
+        "fairy": "Fada",
+        "unknown": "Desconhecido",
+        "shadow": "Sombrosos",
+
+
+        "attack": "Ataque",
+        "defense": "Defesa",
+        "special-attack": "Ataque Especial",
+        "special-defense": "Defesa Especial",
+        "speed": "Velocidade"
+
+    }
+}

@@ -1,0 +1,64 @@
+.custom_input_pokemon {
+    input::placeholder {
+        font-weight: 400;
+    }
+
+    select::placeholder {
+        font-weight: 400;
+    }
+
+    .pokemoncard_container__sprite {
+        padding: 80px;
+
+        img {
+            width: 80px !important;
+        }
+    }
+
+    [class^='pokemoncard_container__infos__'] {
+        div {
+            margin: 0 !important;
+        }
+    }
+
+    .pokemoncard_container__infos_details {
+        flex-direction: column;
+
+        .input__container {
+            margin-top: 20px;
+        }
+    }
+
+    .pokemoncard_container__infos__abilities {
+        .input__container {
+            margin-top: 20px !important;
+        }
+    }
+
+    .pokemoncard_container__infos__stats {
+        flex-direction: column;
+
+        label {
+            margin: 0 0 5px 0 !important;
+            text-transform: uppercase;
+        }
+
+        .input__container {
+            margin-bottom: 20px !important;
+            align-items: inherit !important;
+        }
+    }
+
+    .pokemoncard_container__infos__nature {
+        select {
+            height: 200px;
+        }
+    }
+
+    .btn.btn--text {
+        &:disabled {
+            cursor: not-allowed;
+            opacity: .5;
+        }
+    }
+}

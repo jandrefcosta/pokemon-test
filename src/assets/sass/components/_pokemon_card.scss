@@ -1,0 +1,311 @@
+.pokemoncard_container {
+    color: $color-neutral-900;
+    padding-top: 50px;
+
+    // #43ea7e
+    // rgb(67,234,126)
+    // #39f9d5
+    // rgb(57,249,213)
+    background-image: linear-gradient(to right, rgba(67, 234, 126, 1), rgba(57, 249, 213, 1));
+    overflow: auto;
+    height: 100%;
+
+    &_content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .pokemoncard_container__sprite {
+        background-color: white;
+        border: 4px solid #43ea7e;
+        border-radius: 100%;
+        z-index: 1000;
+
+        img {
+            width: 250px;
+            height: auto;
+        }
+    }
+
+    .pokemoncard_container__infos {
+        margin-top: -110px;
+        padding-top: 110px;
+        padding-bottom: 110px;
+        width: 100%;
+        background-color: white;
+
+        display: flex;
+        flex-direction: column;
+
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+
+        padding-left: 20px;
+        padding-right: 20px;
+
+
+    }
+
+    [class^='pokemoncard_container__infos__'] {
+        overflow: hidden;
+
+        &:not(:first-child) {
+            margin-top: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            >span {
+                position: relative;
+
+                width: 100%;
+                text-align: center;
+
+                font-weight: 900;
+                font-size: 15px;
+                line-height: 24px;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 60%;
+                    top: 50%;
+                    width: 40%;
+                    border-top: 1px solid lightgrey;
+                    z-index: 0;
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    right: 60%;
+                    top: 50%;
+                    width: 40%;
+                    border-top: 1px solid lightgrey;
+                }
+            }
+
+            div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 15px;
+            }
+        }
+    }
+
+    .pokemoncard_container__infos {
+
+        &-name {
+            position: relative;
+            margin: 25px 0;
+            text-align: center;
+            text-transform: uppercase;
+
+            font-weight: 900;
+            font-size: 18px;
+            line-height: 24px;
+
+            img {
+                position: absolute;
+                top: calc(50% - 8px);
+                right: 10%;
+            }
+        }
+
+        &-name-edit {
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            justify-content: center;
+
+            margin: 10px auto;
+
+            button {
+                width: auto;
+                height: auto;
+                padding: 8px;
+                background: none;
+                border-radius: 8px;
+                margin-left: 5px;
+                border-width: 2px;
+                border-color: $color-neutral-600;
+                background-color: rgba(0, 0, 0, .15);
+
+                img {
+                    width: 20px;
+                }
+            }
+        }
+
+        &_details {
+            display: flex;
+
+            span {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                flex-basis: 33%;
+
+                align-items: center;
+
+                font-weight: 900;
+
+                font-size: 18px;
+                line-height: 24px;
+
+                &:not(:last-child)::after {
+                    position: absolute;
+                    content: "";
+                    top: 0;
+                    right: 0;
+                    width: 2px;
+                    height: 100%;
+                    border-right: 2px solid lightgrey;
+                }
+
+                label {
+                    font-size: 15px;
+                    line-height: 24px;
+                }
+
+            }
+        }
+
+        &__nature {
+
+            label {
+                border-radius: 50px;
+                color: white;
+                padding: 5px 30px;
+                margin: 5px;
+                font-weight: bold;
+                font-size: 12px;
+                line-height: 16px;
+
+                text-transform: uppercase;
+            }
+        }
+
+        &__abilities {
+            span {
+                &::after {
+                    left: 70% !important;
+                    width: 40% !important;
+                }
+
+                &::before {
+                    right: 70% !important;
+                    width: 40% !important;
+                }
+            }
+
+            label {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 15px;
+
+                text-transform: uppercase;
+
+                font-weight: bold;
+                font-size: 12px;
+                line-height: 16px;
+            }
+        }
+
+        &__stats {
+
+            span {
+                &::after {
+                    left: 65% !important;
+                    width: 40% !important;
+                }
+
+                &::before {
+                    right: 65% !important;
+                    width: 40% !important;
+                }
+            }
+
+            div {
+                display: flex;
+                flex-direction: column;
+            }
+
+            [class*='defense'] {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                height: 22px;
+                padding-left: 25px;
+                background: url("../../../assets/images/shield.png") center left no-repeat;
+            }
+
+            [class*='attack'] {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                height: 22px;
+                padding-left: 25px;
+                background: url("../../../assets/images/sword.png") center left no-repeat;
+            }
+
+            [class*='speed'] {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                height: 22px;
+                padding-left: 25px;
+                background: url("../../../assets/images/speed.png") center left no-repeat;
+            }
+
+            label {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 15px;
+
+                text-transform: uppercase;
+
+                font-weight: bold;
+                font-size: 12px;
+                line-height: 16px;
+            }
+        }
+    }
+}
+
+.modal__content {
+    .catch-pokemon {
+        position: absolute;
+        bottom: 20px;
+        left: calc(50% - 50px);
+        border: none;
+        background: none;
+    }
+
+    .btn.btn--text {
+        position: absolute;
+        bottom: 20px;
+        left: calc(50% - 98px);
+    }
+
+    .botoes-acoes {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        .btn.btn--text {
+            position: relative;
+            bottom: auto;
+            left: auto;
+            padding: 10px;
+            border-radius: 15px;
+        }
+    }
+
+}
